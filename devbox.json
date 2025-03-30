@@ -2,7 +2,9 @@
   "$schema": "https://raw.githubusercontent.com/jetify-com/devbox/0.14.0/.schema/devbox.schema.json",
   "packages": [
     "vscode@latest",
-    "uv@latest"
+    "uv@latest",
+    "gcc@latest",
+    "cmake@latest"
   ],
   "shell": {
     "init_hook": [
