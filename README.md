@@ -54,6 +54,7 @@ This project uses:
 - TinyLlama 1.1B chat model
 - MCP for AI system composition
 
-## License
+## Next steps
 
-See the LICENSE file for details.
+[Develop more robust clients and servers using Claude](https://modelcontextprotocol.io/tutorials/building-mcp-with-llms#building-mcp-with-llms)
+
