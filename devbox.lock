@@ -1,0 +1,104 @@
+{
+  "lockfile_version": "1",
+  "packages": {
+    "github:NixOS/nixpkgs/nixpkgs-unstable": {
+      "resolved": "github:NixOS/nixpkgs/6c5963357f3c1c840201eda129a99d455074db04?lastModified=1743076231&narHash=sha256-yQugdVfi316qUfqzN8JMaA2vixl%2B45GxNm4oUfXlbgw%3D"
+    },
+    "uv@latest": {
+      "last_modified": "2025-03-26T18:47:43Z",
+      "resolved": "github:NixOS/nixpkgs/bd3bac8bfb542dbde7ffffb6987a1a1f9d41699f#uv",
+      "source": "devbox-search",
+      "version": "0.6.10",
+      "systems": {
+        "aarch64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/mxbd5dskidm87s7pkifn4j999xvgw1l4-uv-0.6.10",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/mxbd5dskidm87s7pkifn4j999xvgw1l4-uv-0.6.10"
+        },
+        "aarch64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/92zlw4nxh07nfbk0pj0ig37bc2j1n72z-uv-0.6.10",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/92zlw4nxh07nfbk0pj0ig37bc2j1n72z-uv-0.6.10"
+        },
+        "x86_64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/jrv7awaxyr77ksx6fjm7nqrqxx54svg3-uv-0.6.10",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/jrv7awaxyr77ksx6fjm7nqrqxx54svg3-uv-0.6.10"
+        },
+        "x86_64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/jcg8fnn76jdvf3aygbkh350cs9hgr9jb-uv-0.6.10",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/jcg8fnn76jdvf3aygbkh350cs9hgr9jb-uv-0.6.10"
+        }
+      }
+    },
+    "vscode@latest": {
+      "last_modified": "2025-03-23T05:31:05Z",
+      "resolved": "github:NixOS/nixpkgs/dd613136ee91f67e5dba3f3f41ac99ae89c5406b#vscode",
+      "source": "devbox-search",
+      "version": "1.98.2",
+      "systems": {
+        "aarch64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/47babdfsakdq3yiisl8wlp9xba38jv78-vscode-1.98.2",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/47babdfsakdq3yiisl8wlp9xba38jv78-vscode-1.98.2"
+        },
+        "aarch64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/hibsjy02nxv203smncr0p1fclg3lf06c-vscode-1.98.2",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/hibsjy02nxv203smncr0p1fclg3lf06c-vscode-1.98.2"
+        },
+        "x86_64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/f192nilhhvrx62yb0xlgl748d5zdlizw-vscode-1.98.2",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/f192nilhhvrx62yb0xlgl748d5zdlizw-vscode-1.98.2"
+        },
+        "x86_64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/qsq8pyvxvwfwsvhsq6xqw1276hxzvv50-vscode-1.98.2",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/qsq8pyvxvwfwsvhsq6xqw1276hxzvv50-vscode-1.98.2"
+        }
+      }
+    }
+  }
+}
