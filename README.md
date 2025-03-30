@@ -1,15 +1,15 @@
 # MCP Systems Setup Repo
 
-A demonstration of setting up VS Code for MCP (Model Composition Protocol) server use with TinyLlama.
+This repository demonstrates how to set up and use the Model Composition Protocol (MCP) with TinyLlama in VS Code.
 
 ## Overview
 
-This repository demonstrates how to set up and run a local MCP server with TinyLlama, a lightweight LLM that can run on consumer hardware. It showcases:
+The Model Composition Protocol (MCP) enables AI systems to expose capabilities to other systems in a standardized way. This project shows how to:
 
-- Setting up a Python environment with `uv`
-- Downloading and running a TinyLlama model
-- Using MCP server and client implementations
-- Integration with VS Code
+- Set up a local MCP server using TinyLlama
+- Create and use MCP clients
+- Accelerate MCP development using LLMs
+- Integrate MCP with VS Code
 
 ## Prerequisites
 
@@ -17,44 +17,101 @@ This repository demonstrates how to set up and run a local MCP server with TinyL
 - [devbox](https://www.jetpack.io/devbox/) for development environment management
 - Git
 
-## Quick Start
+## Getting Started
 
 1. Clone this repository
 2. Initialize the development environment:
    ```bash
    devbox shell
    ```
-3. Run the main script to see available options:
-   ```bash
-   python main.py
-   ```
+3. Install dependencies using `uv` (automatically handled by devbox)
 
-## Available Commands
+## Running the Server
 
-The main script provides several options:
+Start the basic MCP server with:
 
-- **Download Model**: `python download_model.py` - Downloads the TinyLlama model from Hugging Face
-- **Start Server**: `python server.py` - Runs the MCP server with the TinyLlama model
-- **Run Client**: `python client.py` - Connects to the server and demonstrates tool calls
-- **Run with Inspector**: `uv run mcp dev server.py` - Runs the server with the MCP inspector
-- **Install in Claude**: `uv run mcp install server.py` - Installs the server capabilities in Claude
+```bash
+python simple_server.py
+```
+
+Or try the Rick knowledge base server:
+
+```bash
+python rick_server.py
+```
+
+This will initialize the TinyLlama model and expose it through an MCP server running on localhost.
+
+## Testing with a Client
+
+Connect to the basic server using:
+
+```bash
+python simple_client.py
+```
+
+Or connect to the Rick knowledge base server:
+
+```bash
+python rick_client.py
+```
+
+These demonstrate basic interactions with the MCP server, including tool calls and resource utilization.
+
+## Simple Llama Chat
+
+For a direct interface with the TinyLlama model without MCP:
+
+```bash
+python simple_llama_chat.py
+```
+
+## MCP Inspector
+
+For debugging and exploring the MCP server capabilities, use the MCP Inspector:
+
+```bash
+uv run mcp dev simple_server.py
+```
+
+Or for the Rick server:
+
+```bash
+uv run mcp dev rick_server.py
+```
+
+## Integration with Claude
+
+To install your MCP server capabilities in Claude:
+
+```bash
+uv run mcp install simple_server.py
+```
+
+## Guides and Tutorials
+
+- [Building MCP with LLMs](building_mcp_with_llms.md) - Detailed instructions on using Claude and other frontier LLMs to accelerate your MCP development
+- [MCP Tutorial](mcp-tutorial.md) - Step-by-step tutorial for getting started with MCP
 
 ## Project Structure
 
-- `main.py` - Main entry point with options menu
-- `mcp_server.py` - MCP server implementation with tools, resources, and prompts
-- `mcp_client.py` - MCP client implementation demonstrating interaction with the server
+- `simple_server.py` - Basic MCP server implementation with TinyLlama
+- `simple_client.py` - Basic MCP client for testing
+- `rick_server.py` - MCP server with Rick and Morty knowledge base
+- `rick_client.py` - Client for the Rick knowledge base server
+- `Ricks_KB.txt` - Knowledge base text file for the Rick server
+- `simple_llama_chat.py` - Direct interface to TinyLlama without MCP
+- `building_mcp_with_llms.md` - Guide for MCP development with LLMs
+- `mcp-tutorial.md` - Step-by-step MCP tutorial
+- `devbox.json` - Development environment configuration
+- `devbox.lock` - Locked dependencies for devbox
+- `pyproject.toml` - Python project configuration
+- `uv.lock` - Locked dependencies for uv package manager
 - `models/` - Directory for downloaded model files (gitignored)
+- `test/` - Test files for the project
+- `__pycache__/` - Python bytecode cache (gitignored)
 
-## Development
+## Resources
 
-This project uses:
-- `uv` for Python package management
-- `devbox` for development environment setup
-- TinyLlama 1.1B chat model
-- MCP for AI system composition
-
-## Next steps
-
-[Develop more robust clients and servers using Claude](https://modelcontextprotocol.io/tutorials/building-mcp-with-llms#building-mcp-with-llms)
-
+- [MCP Documentation](https://modelcontextprotocol.io/)
+- [TinyLlama on Hugging Face](https://huggingface.co/TinyLlama/TinyLlama-1.1B-Chat-v1.0)
